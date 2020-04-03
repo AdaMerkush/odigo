@@ -1,0 +1,452 @@
+body {
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  min-width: 1280px;;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.header {
+  position: relative;
+  z-index: 1000;
+  height: 148px;
+}
+.header__wrapper {
+  margin: 0 auto;
+  width: 1060px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {}
+
+.menu__list {
+  display: inline-flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+.menu__item + .menu__item {
+  margin-left: 82px;
+}
+.menu__link {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: white;
+}
+.menu__link:focus,
+.menu__link:hover,
+.menu__link:active {
+  color: yellowgreen;
+}
+
+.section {}
+.section_intro {
+  background: url("./pictures/BG.png");
+  background-size: cover;
+  height: 962px;
+  margin-top: -148px;
+  padding-top: 148px;
+}
+.section_benefits {}
+.section_focus {
+  position: relative;
+}
+.section_inspire {
+  position: relative;
+}
+.section_top {
+  position: relative;
+}
+.section_video {
+  position: relative;
+  margin: 144px auto 0 auto;
+}
+
+.intro {
+  color: #FFFFFF;
+  margin: 0 auto;
+  width: 1060px;
+}
+.intro__title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 60px;
+  margin-bottom: 22px;
+}
+.intro__intro {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+.intro__search {
+  margin-top: 59px;
+}
+
+.text-field {
+  position: relative;
+}
+.text-field__label {
+  left: 0;
+  line-height: 26px;
+  pointer-events: none;
+  position: absolute;
+  top: 16px;
+  transition: all 250ms ease;
+  z-index: 1;
+}
+.text-field__label span {
+  font-size: 3em;
+  line-height: 26px;
+  margin-right: 20px;
+  vertical-align: text-bottom;
+}
+.text-field__input {
+  background: none;
+  border: none;
+  border-bottom: 2px solid #BFC0C5;
+  color: #FFFFFF;
+  height: 58px;
+  width: 297px;
+}
+.text-field:focus-within .text-field__label {
+  font-size: 0.75em;
+  opacity: 0.75;
+  top: -13px;
+}
+.text-field:focus-within .text-field__label span {
+  font-size: 2em;
+  margin-right: 10px;
+  vertical-align: sub;
+}
+
+.search {}
+.search__form {
+  display: flex;
+
+}
+.search__field {
+  margin-right: 60px;
+}
+.search__submit {
+  width: 171px;
+  height: 58px;
+  background: #1B7DFF;
+  border: none;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.benefits {
+  background: #FFFFFF;
+  box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
+  margin: -223px auto 20px auto;
+  position: relative;
+  width: 1262px;
+  z-index: 1;
+}
+.benefits__head {
+  width: 1060px;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 42px;
+  color: #102746;
+  margin: auto;
+}
+.benefits__title {
+  height: 232px;
+  padding-top: 93px;  /*как выровнять по середине? не в px?*/
+}
+.benefits__body {
+  width: 1060px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.benefits-card {
+  display: flex;
+  flex-direction: column;
+  height: 432px;
+  justify-content: space-around;
+}
+.benefits-card__image {
+  padding-top: 23px;
+  margin-bottom: 37px;
+}
+.benefits-card__title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 37px;
+}
+.benefits-card__text {
+  margin-bottom: 39px;
+}
+.benefits-card__link-1 {
+  margin-bottom: 112px;
+}
+.benefits-card__link-2 {
+  margin-bottom: 112px;
+  margin-left: 30px;
+}
+
+.inspire {
+  margin: 131px auto 0 auto;
+  width: 1262px;
+  height: 735px;
+}
+.inspire__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 88px;
+}
+.inspire__title {
+  position: relative;
+  font-weight: 500;
+  font-size: 35px;
+  color: #102746;
+}
+.inspire__title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background: #006DFE;
+  height: 2px;
+  width: 250px;
+}
+.inspire__link {}
+.inspire__body {
+  display: grid;
+  grid-template-columns: repeat(6 auto);
+  grid-template-rows: 360px 280px;
+  gap: 10px;
+  grid-template-areas: 
+  "fuji fuji fuji kyoto kyoto kyoto"
+  "tokio tokio niigata niigata sapporo sapporo";
+}
+
+.inspire-card {
+  position: relative;
+}
+.inspire-card::before {
+  background: rgba(21, 24, 36, 0.4);
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.inpire-card_fuji {
+  grid-area: fuji;
+}
+.inpire-card_kyoto {
+  grid-area: kyoto;
+}
+.inpire-card_tokio {
+  grid-area: tokio;
+}
+.inpire-card_niigata {
+  grid-area: niigata;
+}
+.inpire-card_sapporo {
+  grid-area: sapporo;
+}
+.inspire-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.inspire-card__link {
+  position: absolute;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+  color: #FFFFFF;
+  bottom: 20px;
+  left: 20px;
+  z-index: 2;
+}
+
+.focus {
+  margin: 131px auto 0 auto;
+  width: 1262px;
+  height: 820px;
+}
+
+.focus-card {
+  display: flex;
+}
+.focus-card_totori {
+  flex-direction: row;
+}
+.focus-card_kyoto {
+  flex-direction: row-reverse;
+  margin-top: 60px;
+}
+.focus-card__head {}
+.focus-card__head_totory {
+  margin-right: 66px;
+}
+.focus-card__head_kyoto {
+  margin-left: 66px;
+}
+.focus-card__image {
+  width: 597px;
+  height: 354px;
+  object-fit: cover;
+}
+.focus-card__body {}
+.focus-card__title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  margin-top: 20px;
+  display: inline-block;
+  margin-right: 132px;
+}
+.focus-card__body p {
+  font-weight: normal;
+  font-size: 16px;
+  margin-top: 85px;
+  display: inline-block;
+  width: 519px;
+}
+.focus-card__link {
+  display: inline-block;
+  margin-top: 94px;
+}
+
+.top {
+  margin: 130px auto 0 auto;
+  width: 1260px;
+}
+.top__head {
+  margin-bottom: 64px;
+}
+.top__body {
+  display: grid;
+  gap: 58px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 580px 580px;
+}
+.top__title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  position: relative;
+}
+.top__title::after {
+  position: absolute;
+  content: '';
+  background: #006DFE;
+  height: 3px;
+  width: 253px;
+  left: 0;
+  top: 50px;
+}
+
+.top-card {}
+.top-card__head {
+  height: 380px;
+  position: relative;
+  width: 380px;
+}
+.top-card__body {
+  display: inline-block;
+  margin-top: 45px;
+  width: 370px;
+  height: 72px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+}
+.top-card__foot {
+  margin-top: 30px;
+}
+.top-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.top-card__info {
+  align-items: center;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  height: 55px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.top-card__marks {
+  background: none;
+  justify-content: center; /*????*/
+}
+.top-card__button {}
+
+.video {
+  display: block;
+  width: 100%;
+}
+
+.footer {
+  background-color: #0E1D28;
+  position: relative;
+}
+.footer__wrapper {
+  margin: 0 auto;
+  max-width: 1440px;
+  height: 370px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo {
+  background: none;
+}
+.footer-logo__image {
+  width: 170px;
+  height: 64px;
+}
+
+.footer-menu__column {
+  width: 150px;
+}
+.footer-menu__list {}
+.footer-menu__item {}
+
+.footer-menu__link {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: #FFFFFF;
+  padding-top: 3px;
+}
+.footer-menu__link:hover,
+.footer-menu__link:focus,
+.footer-menu__link:active {
+  color: yellowgreen;
+}
